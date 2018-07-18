@@ -1,0 +1,5 @@
+*** Details regarding the experiments ***
+
+| File name | Date | Machine | Observation |
+
+RRT_Plan_Robot_Boxes_RRT_PLAN - 17/07/2018 - brucutu - 1st subplanner (max_step=1000) and 2nd subplanner max_step=10 both with original h_add heuristic
