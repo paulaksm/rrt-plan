@@ -121,7 +121,6 @@ class ProgressionPlanning(object):
             qnew_node = RandomTree(q_new, q_near, cost=qnew_cost, edge=path)
             node_tree.add(qnew_node)
             q_goal, path, reached = self.subplanner(qnew_node, State(self.problem.goal))
-            # q_goal, path, reached = self.subplanner(qnew_node, State(self.problem.goal))
             if reached:
                 full_rgs = True
                 #print(q_goal, self.problem.goal)
@@ -135,12 +134,9 @@ class ProgressionPlanning(object):
         last_path = path
         path = []
         while state is not None:
-            path.extend(state.edge)
+            path[:0] = state.edge
             state = state.parent_node
         path.extend(last_path)
-        # print('Init: ', init_state)
-        # print('Goal: ', self.problem.goal)
-        # print('Plan: ', path)
         return path, qrand_list
 
     def subplanner(self, init_state, goal_state, max_step=10):
