@@ -25,6 +25,46 @@ def goal_test(state, goal):
 def h_naive(state, planning):
     return 0
 
+def h_ff(state, planning, goal):
+    graphplan = dict() #graphplan relaxed
+    actions = planning.actions
+    #goal = planning._problem.goal
+    X = state
+    isGoal = False
+    if X.intersect(goal) == goal: #ja estamos na meta entao o compimento (a quantidade) de acoes necessaria eh zero
+        return 0
+    level = 0
+    graphplan[(level,'state')] = X
+    #PHASE 1 - expand graph
+    while not isGoal:
+        actionsApplicable = applicable(X,actions)
+        level += 1
+        for a in actionsApplicable:
+            X = successorRelaxed(X,a) #added positive effects of a
+            if X.intersect(goal) == goal:
+                isGoal = True
+                break
+        graphplan[(level,'state')] = X
+        graphplan[(level,'action')] = actionsApplicable
+    #PHASE 2 - busca regressiva - partindo dos atomos do goal ate termos os atomos do state
+    thisLevelGoals = set()
+    thisLevelGoals = thisLevelGoals.union(goal)
+    relaxedActions = set()
+    while (level > 0):
+        prevLevelGoals = set()
+        for tg in thisLevelGoals:
+            if tg in graphplan[level-1,'state']:
+                prevLevelGoals.add(tg)
+            else:
+                for a in graphplan[level,'action']:
+                    if tg in a.pos_effect:
+                        prevLevelGoals = prevLevelGoals.union(a.precond)
+                        relaxedActions.add(a)
+                        break 
+        level -= 1
+        thisLevelGoals = prevLevelGoals.copy()
+    return len(relaxedActions)
+
 def h_add_planner(state, planning, goal):
     h = dict() 
     actions = planning.actions

@@ -1,0 +1,4 @@
+- Criar uma classe abstrata ProgressionPlanning em um arquivo diferente talvez por questão de organização, criar classes que herdam essa classe abstrata e adicionam detalhes de implementação: RRTPlan, subplanner.py com as classes astar, wastar e ehc herdando a classe abstrata ProgressionPlanning
+
+- Colocar classe Frontier junto no arquivo subplanner.py
+- Provavelmente vou renomear o arquivo planner.py para RRTPlan.py 

@@ -1,0 +1,187 @@
+
+>> Solving pddl/robot/boxes/problem01.pddl ...
+
+Goal found
+>> solution length = 3
+>> time: parsing = 0.0023, grounding = 0.0005, planning = 0.0015
+
+[pickup(box1, left, room1), move(room1, room2), putdown(box1, left, room2)]
+
+>> Solving pddl/robot/boxes/problem02.pddl ...
+
+Goal found
+>> solution length = 5
+>> time: parsing = 0.0033, grounding = 0.0008, planning = 0.0067
+
+[pickup(box1, left, room1), pickup(box2, right, room1), move(room1, room2), putdown(box1, left, room2), putdown(box2, right, room2)]
+
+>> Solving pddl/robot/boxes/problem03.pddl ...
+
+Goal found
+>> solution length = 9
+>> time: parsing = 0.0025, grounding = 0.0011, planning = 0.0209
+
+[pickup(box1, left, room1), pickup(box3, right, room1), move(room1, room2), putdown(box1, left, room2), putdown(box3, right, room2), move(room2, room1), pickup(box2, left, room1), move(room1, room2), putdown(box2, left, room2)]
+
+>> Solving pddl/robot/boxes/problem04.pddl ...
+
+Goal found
+>> solution length = 13
+>> time: parsing = 0.0042, grounding = 0.0027, planning = 0.0641
+
+[pickup(box2, left, room1), pickup(box3, right, room1), move(room1, room2), putdown(box2, left, room2), putdown(box3, right, room2), move(room2, room1), pickup(box4, left, room1), move(room1, room2), putdown(box4, left, room2), move(room2, room1), pickup(box1, left, room1), move(room1, room2), putdown(box1, left, room2)]
+
+>> Solving pddl/robot/boxes/problem05.pddl ...
+
+Goal found
+>> solution length = 15
+>> time: parsing = 0.0028, grounding = 0.0019, planning = 0.0963
+
+[putdown(box1, left, room2), putdown(box5, right, room2), move(room2, room1), pickup(box1, left, room1), pickup(box2, right, room1), move(room1, room2), pickup(box3, left, room1), move(room1, room2), putdown(box3, left, room2), move(room2, room1), pickup(box5, right, room1), pickup(box4, left, room1), move(room1, room2), putdown(box4, left, room2), putdown(box2, right, room2)]
+
+>> Solving pddl/robot/boxes/problem06.pddl ...
+
+Goal found
+>> solution length = 19
+>> time: parsing = 0.0036, grounding = 0.0029, planning = 0.2261
+
+[putdown(box6, right, room2), putdown(box2, right, room2), move(room2, room1), pickup(box5, left, room1), pickup(box6, right, room1), move(room1, room2), move(room2, room1), pickup(box2, right, room1), move(room1, room2), pickup(box1, left, room1), pickup(box3, right, room1), move(room1, room2), putdown(box1, left, room2), putdown(box3, right, room2), move(room2, room1), pickup(box4, left, room1), move(room1, room2), putdown(box4, left, room2), putdown(box5, left, room2)]
+
+>> Solving pddl/robot/boxes/problem07.pddl ...
+
+Goal found
+>> solution length = 23
+>> time: parsing = 0.0045, grounding = 0.0043, planning = 30.3285
+
+[putdown(box5, right, room2), move(room2, room1), pickup(box4, left, room1), pickup(box5, right, room1), move(room1, room2), putdown(box4, left, room2), pickup(box1, left, room1), move(room1, room2), putdown(box1, left, room2), move(room2, room1), pickup(box2, left, room1), move(room1, room2), putdown(box2, left, room2), move(room2, room1), pickup(box3, left, room1), pickup(box6, right, room1), move(room1, room2), putdown(box3, left, room2), putdown(box6, right, room2), move(room2, room1), pickup(box7, left, room1), move(room1, room2), putdown(box7, left, room2)]
+
+>> Solving pddl/robot/boxes/problem08.pddl ...
+
+Goal found
+>> solution length = 27
+>> time: parsing = 0.0031, grounding = 0.0029, planning = 2.0421
+
+[putdown(box7, right, room2), move(room2, room1), pickup(box1, left, room1), pickup(box7, right, room1), move(room1, room2), putdown(box1, left, room2), move(room2, room1), pickup(box6, left, room1), move(room1, room2), putdown(box6, left, room2), move(room2, room1), pickup(box5, left, room1), move(room1, room2), putdown(box5, left, room2), pickup(box2, left, room1), move(room1, room2), putdown(box2, left, room2), move(room2, room1), pickup(box3, left, room1), pickup(box4, right, room1), move(room1, room2), putdown(box3, left, room2), putdown(box4, right, room2), move(room2, room1), pickup(box8, left, room1), move(room1, room2), putdown(box8, left, room2)]
+
+>> Solving pddl/robot/boxes/problem09.pddl ...
+
+Goal found
+>> solution length = 29
+>> time: parsing = 0.0029, grounding = 0.0029, planning = 1.1717
+
+[putdown(box6, right, room2), move(room2, room1), pickup(box1, left, room1), pickup(box6, right, room1), move(room1, room2), putdown(box1, left, room2), move(room1, room2), putdown(box5, right, room2), move(room2, room1), pickup(box2, left, room1), pickup(box4, right, room1), move(room1, room2), putdown(box2, left, room2), putdown(box4, right, room2), move(room2, room1), pickup(box7, left, room1), move(room1, room2), putdown(box7, left, room2), move(room2, room1), pickup(box5, right, room1), pickup(box3, left, room1), pickup(box8, right, room1), move(room1, room2), putdown(box3, left, room2), putdown(box8, right, room2), move(room2, room1), pickup(box9, left, room1), move(room1, room2), putdown(box9, left, room2)]
+
+>> Solving pddl/robot/boxes/problem10.pddl ...
+
+Goal found
+>> solution length = 35
+>> time: parsing = 0.0054, grounding = 0.0063, planning = 7.1164
+
+[move(room2, room1), pickup(box4, left, room1), pickup(box5, right, room1), move(room1, room2), putdown(box4, left, room2), putdown(box5, right, room1), pickup(box1, left, room1), move(room1, room2), putdown(box1, left, room2), move(room2, room1), pickup(box3, left, room1), pickup(box8, right, room1), move(room1, room2), putdown(box3, left, room2), putdown(box8, right, room2), move(room2, room1), pickup(box9, left, room1), move(room1, room2), putdown(box9, left, room2), move(room2, room1), pickup(box5, right, room1), pickup(box2, left, room1), move(room1, room2), putdown(box2, left, room2), move(room2, room1), pickup(box6, left, room1), pickup(box7, right, room1), move(room1, room2), putdown(box6, left, room2), putdown(box7, right, room2), move(room2, room1), pickup(box10, left, room1), move(room1, room2), putdown(box10, left, room2), putdown(box5, right, room2)]
+
+>> Solving pddl/robot/boxes/problem11.pddl ...
+
+Goal found
+>> solution length = 39
+>> time: parsing = 0.0051, grounding = 0.0067, planning = 144.8963
+
+[putdown(box5, right, room2), move(room2, room1), pickup(box6, left, room1), move(room1, room2), putdown(box6, left, room2), move(room2, room1), pickup(box5, right, room1), move(room1, room2), pickup(box1, left, room1), move(room1, room2), putdown(box1, left, room2), putdown(box8, right, room2), move(room2, room1), pickup(box11, left, room1), move(room1, room2), putdown(box11, left, room2), move(room2, room1), pickup(box8, right, room1), move(room2, room1), pickup(box2, left, room1), putdown(box5, right, room1), pickup(box10, right, room1), move(room1, room2), putdown(box2, left, room2), putdown(box10, right, room2), pickup(box3, left, room1), move(room1, room2), putdown(box3, left, room2), move(room2, room1), pickup(box5, right, room1), pickup(box4, left, room1), pickup(box7, right, room1), move(room1, room2), putdown(box4, left, room2), putdown(box7, right, room2), move(room2, room1), pickup(box9, left, room1), move(room1, room2), putdown(box9, left, room2)]
+
+>> Solving pddl/robot/boxes/problem12.pddl ...
+
+Goal found
+>> solution length = 41
+>> time: parsing = 0.0050, grounding = 0.0067, planning = 333.6083
+
+[move(room2, room1), pickup(box9, left, room1), pickup(box10, right, room1), move(room1, room2), putdown(box9, left, room2), move(room1, room2), putdown(box6, right, room2), move(room2, room1), pickup(box2, left, room1), pickup(box4, right, room1), move(room1, room2), putdown(box2, left, room2), putdown(box4, right, room2), move(room2, room1), pickup(box8, left, room1), move(room1, room2), putdown(box8, left, room2), move(room1, room2), putdown(box7, right, room2), move(room2, room1), pickup(box6, right, room1), move(room2, room1), pickup(box7, right, room1), pickup(box1, left, room1), move(room1, room2), putdown(box1, left, room2), move(room2, room1), pickup(box3, left, room1), move(room1, room2), putdown(box3, left, room2), move(room2, room1), pickup(box5, left, room1), pickup(box11, right, room1), move(room1, room2), putdown(box5, left, room2), putdown(box11, right, room2), move(room2, room1), pickup(box12, left, room1), move(room1, room2), putdown(box12, left, room2), putdown(box10, right, room2)]
+
+>> Solving pddl/robot/boxes/problem13.pddl ...
+
+Goal found
+>> solution length = 43
+>> time: parsing = 0.0056, grounding = 0.0055, planning = 367.8234
+
+[move(room2, room1), pickup(box1, left, room1), pickup(box4, right, room1), move(room1, room2), putdown(box1, left, room2), pickup(box8, left, room1), move(room1, room2), putdown(box8, left, room2), putdown(box11, right, room2), move(room2, room1), pickup(box11, right, room1), move(room1, room2), putdown(box6, right, room2), move(room2, room1), pickup(box2, left, room1), move(room1, room2), putdown(box2, left, room2), move(room2, room1), pickup(box10, left, room1), pickup(box12, right, room1), move(room1, room2), putdown(box10, left, room2), putdown(box12, right, room2), move(room2, room1), pickup(box13, left, room1), move(room1, room2), putdown(box13, left, room2), move(room2, room1), pickup(box6, right, room1), pickup(box3, left, room1), move(room1, room2), putdown(box3, left, room2), move(room2, room1), pickup(box5, left, room1), pickup(box7, right, room1), move(room1, room2), putdown(box5, left, room2), putdown(box7, right, room2), move(room2, room1), pickup(box9, left, room1), move(room1, room2), putdown(box9, left, room2), putdown(box4, right, room2)]
+
+>> Solving pddl/robot/boxes/problem14.pddl ...
+
+Goal found
+>> solution length = 51
+>> time: parsing = 0.0041, grounding = 0.0046, planning = 3331.2195
+
+[move(room1, room2), putdown(box7, right, room2), move(room2, room1), pickup(box1, left, room1), move(room1, room2), putdown(box1, left, room2), move(room2, room1), pickup(box6, left, room1), pickup(box8, right, room1), move(room1, room2), putdown(box6, left, room2), putdown(box8, right, room2), move(room2, room1), pickup(box13, left, room1), move(room1, room2), putdown(box13, left, room2), move(room2, room1), pickup(box7, right, room1), move(room2, room1), pickup(box5, left, room1), move(room1, room2), putdown(box5, left, room2), move(room2, room1), pickup(box9, left, room1), move(room1, room2), putdown(box9, left, room2), move(room2, room1), pickup(box11, left, room1), pickup(box12, right, room1), move(room1, room2), putdown(box11, left, room2), putdown(box12, right, room2), move(room2, room1), pickup(box14, left, room1), move(room1, room2), putdown(box14, left, room2), pickup(box4, left, room1), putdown(box5, right, room1), pickup(box10, right, room1), move(room1, room2), putdown(box4, left, room2), putdown(box10, right, room2), move(room2, room1), pickup(box5, right, room1), pickup(box2, left, room1), move(room1, room2), putdown(box2, left, room2), move(room2, room1), pickup(box3, left, room1), move(room1, room2), putdown(box3, left, room2)]
+
+>> Solving pddl/robot/boxes/problem15.pddl ...
+
+Goal found
+>> solution length = 53
+>> time: parsing = 0.0063, grounding = 0.0057, planning = 871.5723
+
+[pickup(box11, left, room1), move(room1, room2), putdown(box11, left, room2), putdown(box14, right, room2), move(room2, room1), pickup(box13, left, room1), move(room1, room2), putdown(box13, left, room2), move(room2, room1), pickup(box14, right, room1), move(room2, room1), pickup(box2, left, room1), move(room1, room2), putdown(box2, left, room2), move(room2, room1), pickup(box7, left, room1), pickup(box12, right, room1), move(room1, room2), putdown(box7, left, room2), putdown(box12, right, room2), move(room2, room1), pickup(box15, left, room1), move(room1, room2), putdown(box15, left, room2), move(room1, room2), putdown(box4, right, room2), move(room1, room2), putdown(box6, right, room2), move(room2, room1), pickup(box4, right, room1), move(room2, room1), pickup(box6, right, room1), pickup(box3, left, room1), move(room1, room2), putdown(box3, left, room2), move(room2, room1), pickup(box5, left, room1), move(room1, room2), putdown(box5, left, room2), move(room2, room1), pickup(box8, left, room1), pickup(box9, right, room1), move(room1, room2), putdown(box8, left, room2), putdown(box9, right, room2), move(room2, room1), pickup(box10, left, room1), move(room1, room2), putdown(box10, left, room2), move(room2, room1), pickup(box1, left, room1), move(room1, room2), putdown(box1, left, room2)]
+
+>> Solving pddl/robot/boxes/problem16.pddl ...
+
+Goal found
+>> solution length = 55
+>> time: parsing = 0.0060, grounding = 0.0084, planning = 605.2613
+
+[putdown(box11, right, room2), move(room2, room1), pickup(box1, left, room1), pickup(box11, right, room1), move(room1, room2), putdown(box1, left, room2), pickup(box5, left, room1), move(room1, room2), putdown(box5, left, room2), putdown(box14, right, room2), move(room2, room1), pickup(box14, right, room1), move(room1, room2), putdown(box6, right, room2), move(room2, room1), pickup(box4, left, room1), pickup(box8, right, room1), move(room1, room2), putdown(box4, left, room2), putdown(box8, right, room2), move(room2, room1), pickup(box13, left, room1), move(room1, room2), putdown(box13, left, room2), move(room2, room1), pickup(box6, right, room1), putdown(box4, right, room1), pickup(box2, left, room1), move(room1, room2), putdown(box2, left, room2), move(room2, room1), pickup(box3, left, room1), pickup(box10, right, room1), move(room1, room2), putdown(box3, left, room2), putdown(box10, right, room2), move(room2, room1), pickup(box16, left, room1), move(room1, room2), putdown(box16, left, room2), move(room2, room1), pickup(box4, right, room1), pickup(box7, left, room1), move(room1, room2), putdown(box7, left, room2), move(room2, room1), pickup(box9, left, room1), pickup(box12, right, room1), move(room1, room2), putdown(box9, left, room2), putdown(box12, right, room2), move(room2, room1), pickup(box15, left, room1), move(room1, room2), putdown(box15, left, room2)]
+
+>> Solving pddl/robot/boxes/problem17.pddl ...
+
+Goal found
+>> solution length = 59
+>> time: parsing = 0.0063, grounding = 0.0085, planning = 1039.5759
+
+[putdown(box9, right, room2), move(room2, room1), pickup(box12, left, room1), pickup(box15, right, room1), move(room1, room2), putdown(box12, left, room2), putdown(box15, right, room2), move(room2, room1), pickup(box9, right, room1), move(room1, room2), move(room1, room2), putdown(box13, right, room2), move(room2, room1), pickup(box5, left, room1), pickup(box14, right, room1), move(room1, room2), putdown(box5, left, room2), putdown(box14, right, room2), move(room2, room1), pickup(box16, left, room1), move(room1, room2), putdown(box16, left, room2), move(room2, room1), pickup(box13, right, room1), move(room1, room2), putdown(box8, right, room2), move(room2, room1), pickup(box2, left, room1), move(room1, room2), putdown(box2, left, room2), move(room2, room1), pickup(box7, left, room1), pickup(box10, right, room1), move(room1, room2), putdown(box7, left, room2), putdown(box10, right, room2), move(room2, room1), pickup(box11, left, room1), move(room1, room2), putdown(box11, left, room2), move(room2, room1), pickup(box8, right, room1), pickup(box3, left, room1), putdown(box7, right, room1), pickup(box17, right, room1), move(room1, room2), putdown(box3, left, room2), putdown(box17, right, room2), move(room2, room1), pickup(box7, right, room1), pickup(box1, left, room1), pickup(box4, right, room1), move(room1, room2), putdown(box1, left, room2), putdown(box4, right, room2), move(room2, room1), pickup(box6, left, room1), move(room1, room2), putdown(box6, left, room2)]
+
+>> Solving pddl/robot/boxes/problem18.pddl ...
+
+Goal found
+>> solution length = 63
+>> time: parsing = 0.0040, grounding = 0.0065, planning = 6757.6085
+
+[putdown(box3, right, room2), move(room2, room1), pickup(box13, left, room1), pickup(box17, right, room1), move(room1, room2), putdown(box13, left, room2), putdown(box17, right, room2), move(room2, room1), pickup(box3, right, room1), move(room1, room2), move(room1, room2), putdown(box9, right, room2), move(room2, room1), pickup(box6, left, room1), move(room1, room2), putdown(box6, left, room2), move(room2, room1), pickup(box8, left, room1), pickup(box11, right, room1), move(room1, room2), putdown(box8, left, room2), putdown(box11, right, room2), move(room2, room1), pickup(box18, left, room1), move(room1, room2), putdown(box18, left, room2), move(room2, room1), pickup(box9, right, room1), move(room1, room2), putdown(box5, right, room2), move(room2, room1), pickup(box1, left, room1), pickup(box4, right, room1), move(room1, room2), putdown(box1, left, room2), putdown(box4, right, room2), move(room2, room1), pickup(box16, left, room1), move(room1, room2), putdown(box16, left, room2), move(room2, room1), pickup(box5, right, room1), putdown(box5, right, room1), pickup(box10, left, room1), pickup(box14, right, room1), move(room1, room2), putdown(box10, left, room2), putdown(box14, right, room2), move(room2, room1), pickup(box15, left, room1), move(room1, room2), putdown(box15, left, room2), move(room2, room1), pickup(box5, right, room1), pickup(box2, left, room1), pickup(box7, right, room1), move(room1, room2), putdown(box2, left, room2), putdown(box7, right, room2), move(room2, room1), pickup(box12, left, room1), move(room1, room2), putdown(box12, left, room2)]
+
+>> Solving pddl/robot/boxes/problem19.pddl ...
+
+Goal found
+>> solution length = 67
+>> time: parsing = 0.0065, grounding = 0.0086, planning = 7148.5809
+
+[putdown(box15, right, room2), move(room2, room1), pickup(box3, left, room1), pickup(box15, right, room1), move(room1, room2), putdown(box3, left, room2), putdown(box1, right, room2), move(room2, room1), pickup(box1, right, room1), move(room1, room2), pickup(box6, right, room1), move(room1, room2), putdown(box6, right, room2), putdown(box11, left, room2), move(room2, room1), pickup(box13, left, room1), move(room1, room2), putdown(box13, left, room2), putdown(box7, left, room2), move(room2, room1), pickup(box11, left, room1), pickup(box14, right, room1), move(room1, room2), putdown(box14, right, room2), putdown(box5, right, room2), move(room2, room1), pickup(box7, left, room1), pickup(box4, left, room1), move(room1, room2), putdown(box4, left, room2), move(room2, room1), pickup(box5, right, room1), putdown(box5, right, room1), pickup(box8, left, room1), move(room1, room2), putdown(box8, left, room2), move(room2, room1), pickup(box12, left, room1), pickup(box16, right, room1), move(room1, room2), putdown(box12, left, room2), putdown(box16, right, room2), move(room2, room1), pickup(box19, left, room1), move(room1, room2), putdown(box19, left, room2), move(room2, room1), pickup(box5, right, room1), putdown(box4, right, room1), pickup(box2, left, room1), move(room1, room2), putdown(box2, left, room2), move(room2, room1), pickup(box9, left, room1), pickup(box10, right, room1), move(room1, room2), putdown(box9, left, room2), putdown(box10, right, room2), move(room2, room1), pickup(box17, left, room1), move(room1, room2), putdown(box17, left, room2), move(room2, room1), pickup(box4, right, room1), pickup(box18, left, room1), move(room1, room2), putdown(box18, left, room2)]
+
+>> Solving pddl/robot/boxes/problem20.pddl ...
+
+Goal found
+>> solution length = 73
+>> time: parsing = 0.0067, grounding = 0.0097, planning = 8953.9432
+
+[putdown(box10, right, room2), move(room2, room1), pickup(box14, left, room1), move(room1, room2), putdown(box14, left, room2), move(room2, room1), pickup(box10, right, room1), move(room1, room2), move(room2, room1), pickup(box7, left, room1), move(room1, room2), putdown(box7, left, room2), move(room1, room2), putdown(box13, right, room2), move(room2, room1), pickup(box11, left, room1), pickup(box15, right, room1), move(room1, room2), putdown(box11, left, room2), putdown(box15, right, room2), move(room2, room1), pickup(box20, left, room1), move(room1, room2), putdown(box20, left, room2), move(room2, room1), pickup(box13, right, room1), putdown(box7, left, room1), pickup(box3, left, room1), move(room1, room2), putdown(box3, left, room2), move(room2, room1), pickup(box4, left, room1), pickup(box6, right, room1), move(room1, room2), putdown(box4, left, room2), putdown(box6, right, room2), move(room2, room1), pickup(box12, left, room1), move(room1, room2), putdown(box12, left, room2), putdown(box5, right, room2), move(room2, room1), pickup(box7, left, room1), pickup(box1, left, room1), move(room1, room2), putdown(box1, left, room2), move(room2, room1), pickup(box5, right, room1), putdown(box4, right, room1), pickup(box2, left, room1), move(room1, room2), putdown(box2, left, room2), move(room2, room1), pickup(box8, left, room1), pickup(box9, right, room1), move(room1, room2), putdown(box8, left, room2), putdown(box9, right, room2), move(room2, room1), pickup(box16, left, room1), move(room1, room2), putdown(box16, left, room2), move(room2, room1), pickup(box4, right, room1), pickup(box18, left, room1), pickup(box19, right, room1), move(room1, room2), putdown(box18, left, room2), putdown(box19, right, room2), move(room2, room1), pickup(box17, left, room1), move(room1, room2), putdown(box17, left, room2)]
+
+>> Solving pddl/robot/boxes/problem21.pddl ...
+
+Goal found
+>> solution length = 77
+>> time: parsing = 0.0070, grounding = 0.0087, planning = 8180.7293
+
+[pickup(box2, left, room1), move(room1, room2), putdown(box2, left, room2), putdown(box18, right, room2), move(room2, room1), pickup(box12, left, room1), move(room1, room2), putdown(box12, left, room2), move(room2, room1), pickup(box18, right, room1), move(room1, room2), putdown(box17, right, room2), move(room2, room1), pickup(box17, right, room1), move(room2, room1), pickup(box3, left, room1), putdown(box10, right, room1), pickup(box4, right, room1), move(room1, room2), putdown(box3, left, room2), putdown(box4, right, room2), pickup(box20, left, room1), move(room1, room2), putdown(box20, left, room2), move(room2, room1), pickup(box10, right, room1), move(room1, room2), putdown(box6, right, room2), move(room2, room1), pickup(box7, left, room1), move(room1, room2), putdown(box7, left, room2), move(room2, room1), pickup(box9, left, room1), pickup(box14, right, room1), move(room1, room2), putdown(box9, left, room2), putdown(box14, right, room2), move(room2, room1), pickup(box19, left, room1), move(room1, room2), putdown(box19, left, room2), move(room2, room1), pickup(box6, right, room1), move(room1, room2), putdown(box5, right, room2), move(room2, room1), pickup(box5, right, room1), putdown(box4, right, room1), pickup(box1, left, room1), move(room1, room2), putdown(box1, left, room2), move(room2, room1), pickup(box13, left, room1), pickup(box16, right, room1), move(room1, room2), putdown(box13, left, room2), putdown(box16, right, room2), move(room2, room1), pickup(box21, left, room1), move(room1, room2), putdown(box21, left, room2), move(room2, room1), pickup(box4, right, room1), pickup(box8, left, room1), pickup(box11, right, room1), move(room1, room2), putdown(box8, left, room2), putdown(box11, right, room2), move(room2, room1), pickup(box15, left, room1), move(room1, room2), putdown(box15, left, room2), move(room2, room1), pickup(box10, left, room1), move(room1, room2), putdown(box10, left, room2)]
+
+>> Solving pddl/robot/boxes/problem22.pddl ...
+
+Goal found
+>> solution length = 81
+>> time: parsing = 0.0060, grounding = 0.0072, planning = 7049.3132
+
+[putdown(box22, right, room1), pickup(box15, left, room1), pickup(box19, right, room1), move(room1, room2), putdown(box15, left, room2), putdown(box19, right, room2), move(room2, room1), pickup(box21, left, room1), move(room1, room2), putdown(box21, left, room2), move(room2, room1), pickup(box22, right, room1), move(room2, room1), pickup(box6, left, room1), move(room1, room2), putdown(box6, left, room2), move(room1, room2), putdown(box8, right, room2), move(room2, room1), pickup(box2, left, room1), move(room1, room2), putdown(box2, left, room2), move(room2, room1), pickup(box5, left, room1), pickup(box14, right, room1), move(room1, room2), putdown(box5, left, room2), putdown(box14, right, room2), move(room2, room1), pickup(box20, left, room1), move(room1, room2), putdown(box20, left, room2), move(room2, room1), pickup(box8, right, room1), move(room2, room1), pickup(box3, left, room1), move(room1, room2), putdown(box3, left, room2), putdown(box6, right, room1), pickup(box7, left, room1), move(room1, room2), putdown(box7, left, room2), move(room2, room1), pickup(box10, left, room1), pickup(box12, right, room1), move(room1, room2), putdown(box10, left, room2), putdown(box12, right, room2), move(room2, room1), pickup(box13, left, room1), move(room1, room2), putdown(box13, left, room2), move(room2, room1), pickup(box6, right, room1), move(room1, room2), putdown(box4, right, room2), move(room2, room1), pickup(box1, left, room1), move(room1, room2), putdown(box1, left, room2), move(room2, room1), pickup(box11, left, room1), pickup(box17, right, room1), move(room1, room2), putdown(box11, left, room2), putdown(box17, right, room2), move(room2, room1), pickup(box18, left, room1), move(room1, room2), putdown(box18, left, room2), move(room2, room1), pickup(box4, right, room1), pickup(box9, left, room1), pickup(box16, right, room1), move(room1, room2), putdown(box9, left, room2), putdown(box16, right, room2), move(room2, room1), pickup(box22, left, room1), move(room1, room2), putdown(box22, left, room2)]
+
+>> Solving pddl/robot/boxes/problem23.pddl ...
+
+Goal found
+>> solution length = 75
+>> time: parsing = 0.0074, grounding = 0.0164, planning = 14257.0652
+
+[putdown(box15, right, room2), move(room2, room1), pickup(box14, left, room1), pickup(box15, right, room1), move(room1, room2), putdown(box14, left, room2), pickup(box16, left, room1), move(room1, room2), putdown(box16, left, room2), putdown(box20, right, room2), move(room2, room1), pickup(box20, right, room1), move(room2, room1), pickup(box3, left, room1), pickup(box13, right, room1), move(room1, room2), putdown(box3, left, room2), putdown(box13, right, room2), move(room2, room1), pickup(box22, left, room1), move(room1, room2), putdown(box22, left, room2), move(room2, room1), pickup(box10, left, room1), pickup(box18, right, room1), move(room1, room2), putdown(box10, left, room2), putdown(box18, right, room2), pickup(box1, left, room1), move(room1, room2), putdown(box1, left, room2), putdown(box12, right, room2), move(room2, room1), pickup(box12, right, room1), pickup(box6, left, room1), move(room1, room2), putdown(box6, left, room2), putdown(box8, right, room2), move(room2, room1), pickup(box21, left, room1), move(room1, room2), putdown(box21, left, room2), move(room2, room1), pickup(box8, right, room1), pickup(box17, left, room1), putdown(box8, right, room1), pickup(box23, right, room1), move(room1, room2), putdown(box17, left, room2), putdown(box23, right, room2), move(room2, room1), pickup(box8, right, room1), move(room1, room2), putdown(box4, right, room2), move(room2, room1), pickup(box2, left, room1), move(room1, room2), putdown(box2, left, room2), move(room2, room1), pickup(box7, left, room1), pickup(box11, right, room1), move(room1, room2), putdown(box7, left, room2), putdown(box11, right, room2), move(room2, room1), pickup(box19, left, room1), move(room1, room2), putdown(box19, left, room2), move(room2, room1), pickup(box4, right, room1), pickup(box5, left, room1), pickup(box9, right, room1), move(room1, room2), putdown(box5, left, room2), putdown(box9, right, room2)]
+
+>> Solving pddl/robot/boxes/problem24.pddl ...
+

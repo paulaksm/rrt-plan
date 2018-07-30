@@ -113,14 +113,14 @@ class ProgressionPlanning(object):
             q_rand = self.sample_random()
             qrand_list.append(q_rand)
             q_near = self.nearest_neighbor(q_rand, node_tree)
-            q_new, path, reached = self.subplanner(q_near, q_rand, max_step=1000)
+            q_new, path, reached = self.subplanner_EHC(q_near, q_rand, max_step=30)
             # q_new, path, reached = self.subplanner(q_near, q_rand, max_step=30)
             if not reached:
                 continue
             qnew_cost = heuristics.h_add(self, q_new) # q_new is a set of atoms (state)
             qnew_node = RandomTree(q_new, q_near, cost=qnew_cost, edge=path)
             node_tree.add(qnew_node)
-            q_goal, path, reached = self.subplanner(qnew_node, State(self.problem.goal))
+            q_goal, path, reached = self.subplanner_EHC(qnew_node, State(self.problem.goal))
             if reached:
                 full_rgs = True
                 #print(q_goal, self.problem.goal)
@@ -138,6 +138,75 @@ class ProgressionPlanning(object):
             state = state.parent_node
         path.extend(last_path)
         return path, qrand_list
+
+    def subplanner_EHC(self, init_state, goal_state, max_step=10):
+        plan = []      
+        state = State(init_state.node)
+        h_state = heuristics.h_ff(state, self, goal_state)
+        iteration = 0
+        while h_state != 0 and iteration < max_step:
+            best_state, plan_to_best = self.bfs_ehs2(state, goal_state, h_state)
+            if best_state is None:
+                return _,_,False # not reached
+            plan.extend(plan_to_best)
+            h_state = heuristics.h_ff(best_state, self, goal_state)
+            state = best_state
+            iteration += 1
+        if iteration >= max_step:
+            return (state, plan, False)
+        return (state, plan, True)
+
+    def bfs_ehs(self, init, goal, h_state): 
+        # Functional but uses Node structure that is a waste of resource in this particular case
+        plan_queue = util.Queue()
+        closed = set()
+        if isinstance(init, RandomTree):
+            initialNode = Node(init.node)
+        else:
+            initialNode = Node(init)
+        actionsApplicable = self.applicable(init)
+        for action in actionsApplicable:
+            stateSon = self.successor(init, action)
+            nodeSon = Node(stateSon, action, initialNode, 0, 0)
+            plan_queue.push(nodeSon)
+        while not plan_queue.isEmpty():
+            sNode = plan_queue.pop()
+            nxt_state = sNode.state
+            if nxt_state in closed:
+                continue
+            h_nxt = heuristics.h_ff(nxt_state, self, goal)
+            if h_nxt < h_state:
+                return (nxt_state, sNode.path())
+            actionsApplicable = self.applicable(nxt_state)
+            for action in actionsApplicable:
+                stateSon = self.successor(nxt_state, action)
+                nodeSon = Node(stateSon, action, sNode, 0, 0)
+                plan_queue.push(nodeSon)
+            closed.add(nxt_state)
+        return (None, [])
+
+    def bfs_ehs2(self, init, goal, h_state):
+        plan_queue = util.Queue()
+        closed = set()
+        # quando der o push na queue, passar um tupla (state, path) <State, List>
+        actionsApplicable = self.applicable(init)
+        for action in actionsApplicable:
+            stateSon = self.successor(init, action)
+            plan_queue.push((stateSon, [action]))
+        while not plan_queue.isEmpty():
+            nxt_state, plan = plan_queue.pop()
+            if nxt_state in closed:
+                continue
+            h_nxt = heuristics.h_ff(nxt_state, self, goal)
+            if h_nxt < h_state:
+                return (nxt_state, plan)
+            actionsApplicable = self.applicable(nxt_state)
+            for action in actionsApplicable:
+                stateSon = self.successor(nxt_state, action)
+                path = plan + [action]
+                plan_queue.push((stateSon, path))
+            closed.add(nxt_state)
+        return (None, [])
 
     def subplanner(self, init_state, goal_state, max_step=10):
         '''
@@ -174,7 +243,8 @@ class ProgressionPlanning(object):
                                action,
                                sNode,
                                sNode.g + 1,
-                               heuristics.h_add_planner(stateSon, self, goal_state)) 
+                               heuristics.h_ff(stateSon, self, goal_state))
+                               #heuristics.h_add_planner(stateSon, self, goal_state)) 
                 fSon = nodeSon.g + nodeSon.h
                 frontier.update(nodeSon, fSon)
             if frontier.isEmpty():

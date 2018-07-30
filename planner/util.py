@@ -76,6 +76,29 @@ class PriorityQueueWithFunction(PriorityQueue):
         "Adds an item to the queue with priority from the priority function"
         PriorityQueue.push(self, item, self.priorityFunction(item))
 
+class Queue:
+    # ref: https://www.pythoncentral.io/use-queue-beginners-guide/
+    def __init__(self):
+      self.queue = list()
+
+    def push(self,data):
+      #Checking to avoid duplicate entry (not mandatory)
+      if data not in self.queue:
+          self.queue.insert(0,data)
+          return True
+      return False
+
+    def pop(self):
+      if len(self.queue)>0:
+          return self.queue.pop()
+      return ("Queue Empty!")
+
+    def isEmpty(self):
+        return len(self.queue) == 0
+
+    def size(self):
+        return len(self.queue)
+
 
 def raiseNotDefined():
     fileName = inspect.stack()[1][1]
