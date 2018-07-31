@@ -3,7 +3,7 @@ import time
 import signal
 
 from parser     import Parser
-from planner    import ProgressionPlanning
+from planner    import RRTPlan
 from heuristics import h_naive, h_add
 
 def parse():
@@ -45,7 +45,7 @@ if __name__ == '__main__':
             print(action)
     elif args.command == 'solve':
         start_time = time.time()
-        planner = ProgressionPlanning(domain, problem)
+        planner = RRTPlan(domain, problem)
         end_time = time.time()
         uptime['grounding'] = end_time - start_time
 
