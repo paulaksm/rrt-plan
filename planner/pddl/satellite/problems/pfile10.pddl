@@ -40,7 +40,7 @@
 	Star15 - direction
 	Star16 - direction
 )
-(:init ( and
+(:init 
 	(supports instrument0 image4)
 	(calibration_target instrument0 Star1)
 	(supports instrument1 infrared0)
@@ -95,7 +95,7 @@
 	(on_board instrument9 satellite4)
 	(on_board instrument10 satellite4)
 	(power_avail satellite4)
-	(pointing satellite4 Planet10) )
+	(pointing satellite4 Planet10) 
 )
 (:goal (and
 	(pointing satellite4 Planet9)

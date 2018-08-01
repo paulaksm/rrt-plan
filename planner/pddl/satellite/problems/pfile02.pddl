@@ -16,7 +16,7 @@
 	Phenomenon6 - direction
 	Star7 - direction
 )
-(:init ( and
+(:init 
 	(supports instrument0 infrared1)
 	(supports instrument0 infrared0)
 	(calibration_target instrument0 Star0)
@@ -27,7 +27,7 @@
 	(on_board instrument0 satellite0)
 	(on_board instrument1 satellite0)
 	(power_avail satellite0)
-	(pointing satellite0 Planet4) )
+	(pointing satellite0 Planet4) 
 )
 (:goal (and
 	(have_image Planet3 infrared0)

@@ -1,0 +1,1 @@
+(unstack c b)(put-down c)(pick-up b)(stack b c)(pick-up a)(stack a b)(unstack a b)(put-down a)(unstack b c)(put-down b)(pick-up c)(stack c d)(pick-up b)(stack b c)(pick-up a)(stack a b)

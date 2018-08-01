@@ -35,7 +35,7 @@
 	Phenomenon13 - direction
 	Phenomenon14 - direction
 )
-(:init ( and
+(:init 
 	(supports instrument0 thermograph1)
 	(supports instrument0 image0)
 	(calibration_target instrument0 Star3)
@@ -84,7 +84,7 @@
 	(on_board instrument8 satellite3)
 	(on_board instrument9 satellite3)
 	(power_avail satellite3)
-	(pointing satellite3 Phenomenon5) )
+	(pointing satellite3 Phenomenon5) 
 )
 (:goal (and
 	(have_image Phenomenon5 thermograph1)

@@ -68,4 +68,10 @@ class RRTPlan(ProgressionPlanning):
             path[:0] = state.edge
             state = state.parent_node
         path.extend(last_path)
+        validator_plan = ''
+        for act in path:
+            validator_plan += act.validator_format()
+        file_name  = 'plan_{}_{}.txt'.format(self.problem.domain, self.problem.name)
+        with open(file_name, 'w+') as file:
+            file.write(validator_plan)
         return path, qrand_list

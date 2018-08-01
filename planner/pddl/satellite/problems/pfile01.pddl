@@ -14,12 +14,12 @@
 	Star5 - direction
 	Phenomenon6 - direction
 )
-(:init ( and
+(:init 
 	(supports instrument0 thermograph0)
 	(calibration_target instrument0 GroundStation2)
 	(on_board instrument0 satellite0)
 	(power_avail satellite0)
-	(pointing satellite0 Phenomenon6) )
+	(pointing satellite0 Phenomenon6) 
 )
 (:goal (and
 	(have_image Phenomenon4 thermograph0)
