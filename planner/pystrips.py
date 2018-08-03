@@ -16,9 +16,9 @@ def parse():
     parser.add_argument('command', choices=['show', 'ground', 'solve'], help=help_commands)
     parser.add_argument('domain',  type=str, help='path to PDDL domain file')
     parser.add_argument('problem', type=str, help='path to PDDL problem file')
-    parser.add_argument('-ph', '--heuristics', choices=['naive', 'add', 'max', 'ff'],
-                        default='naive', type=str, help='heuristics (default=h_add)')
-    parser.add_argument('-w', '--weight', type=float, default=1.0, help='heuristics weight (default=1.0)')
+    parser.add_argument('-log', '--log', action='store_true', help='outputs a log file regarding sampling')
+    parser.add_argument('-plt', '--plot', action='store_true', help='outputs a plot of RandomTree')
+    # parser.add_argument('-w', '--weight', type=float, default=1.0, help='heuristics weight (default=1.0)')
     parser.add_argument('-v', '--verbose', action='store_true')
     return parser.parse_args()
 
@@ -54,7 +54,12 @@ if __name__ == '__main__':
         start_time = time.time()
         #signal.signal(signal.SIGALRM, signal.SIG_DFL)
         #signal.alarm(120)
-        solution, rand = planner.solve()
+        if args.log:
+            solution, rand = planner.solve_log()
+        elif args.plot:
+            solution, rand = planner.solve_graph_plot()
+        else:
+            solution, rand = planner.solve()
         #signal.alarm(0)
         end_time = time.time()
         uptime['planning'] = end_time - start_time

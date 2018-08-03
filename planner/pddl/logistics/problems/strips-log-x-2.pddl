@@ -1,5 +1,5 @@
 (define (problem strips-log-x-2)
-   (:domain logistics-strips)
+   (:domain logistics)
    (:objects 
      package5 package4 package3 package2 package1 - object
      city10 city9 city8 city7 city6 city5 city4 city3 city2 city1 - city
