@@ -54,10 +54,12 @@ if __name__ == '__main__':
         start_time = time.time()
         #signal.signal(signal.SIGALRM, signal.SIG_DFL)
         #signal.alarm(120)
-        if args.log:
+        if args.log and not args.plot:
             solution, rand = planner.solve_log()
-        elif args.plot:
+        elif args.plot and not args.log:
             solution, rand = planner.solve_graph_plot()
+        elif args.plot and args.log:
+            solution, rand = planner.solve_log_plot()
         else:
             solution, rand = planner.solve()
         #signal.alarm(0)
