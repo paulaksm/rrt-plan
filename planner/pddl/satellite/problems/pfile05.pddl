@@ -27,7 +27,7 @@
 	Phenomenon8 - direction
 	Planet9 - direction
 )
-(:init ( and
+(:init 
 	(supports instrument0 image2)
 	(supports instrument0 thermograph0)
 	(supports instrument0 spectrograph1)
@@ -71,7 +71,7 @@
 	(on_board instrument7 satellite2)
 	(on_board instrument8 satellite2)
 	(power_avail satellite2)
-	(pointing satellite2 Phenomenon5) )
+	(pointing satellite2 Phenomenon5) 
 )
 (:goal (and
 	(pointing satellite0 Phenomenon5)

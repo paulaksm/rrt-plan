@@ -30,7 +30,7 @@
 	Planet10 - direction
 	Planet11 - direction
 )
-(:init ( and
+(:init 
 	(supports instrument0 image1)
 	(supports instrument0 image3)
 	(calibration_target instrument0 Star1)
@@ -71,7 +71,7 @@
 	(on_board instrument6 satellite3)
 	(on_board instrument7 satellite3)
 	(power_avail satellite3)
-	(pointing satellite3 GroundStation2) )
+	(pointing satellite3 GroundStation2) 
 )
 (:goal (and
 	(pointing satellite1 Star1)

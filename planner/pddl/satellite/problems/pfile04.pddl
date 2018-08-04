@@ -20,7 +20,7 @@
 	Phenomenon8 - direction
 	Phenomenon9 - direction
 )
-(:init ( and
+(:init 
 	(supports instrument0 thermograph2)
 	(supports instrument0 infrared0)
 	(calibration_target instrument0 Star0)
@@ -37,7 +37,7 @@
 	(on_board instrument1 satellite1)
 	(on_board instrument2 satellite1)
 	(power_avail satellite1)
-	(pointing satellite1 Star0) )
+	(pointing satellite1 Star0) 
 )
 (:goal (and
 	(pointing satellite1 Planet5)

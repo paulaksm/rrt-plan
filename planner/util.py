@@ -7,6 +7,51 @@ import sys
  Data structures useful for implementing Best-First Search
 """
 
+class FrontierPriorityQueueWithFunction(object):
+    '''
+    FrontierPriorityQueueWithFunction class implement a search frontier using a
+    PriorityQueue for ordering the nodes and a set for
+    constant-time checks of states in frontier.
+
+    OBSERVATION: it receives as input a function `f` that
+    itself receives a node and returns the priority for
+    the given node. Check util.PriorityQueueWithFunction for
+    more details.
+    '''
+
+    def __init__(self, f):
+        self._queue = PriorityQueueWithFunction(f)
+        self._set = set()
+
+    def __contains__(self, node):
+        ''' Return true if `node.state` is in the frontier. '''
+        return node.state in self._set
+
+    def __len__(self):
+        ''' Return the number of nodes in frontier. '''
+        assert(len(self._queue) == len(self._set))
+        return len(self._queue)
+
+    def is_empty(self):
+        ''' Return true if frontier is empty. '''
+        return self._queue.isEmpty()
+
+    def push(self, node):
+        ''' Push `node` to frontier. '''
+        self._queue.push(node)
+        self._set.add(node.state)
+
+    def pop(self):
+        ''' Pop `node` from frontier. '''
+        node = self._queue.pop()
+        self._set.discard(node.state) # antes era remove
+        return node
+
+    def __str__(self):
+        ''' Return string representation of frontier. '''
+        return str(self._queue)
+
+
 
 class PriorityQueue:
     """

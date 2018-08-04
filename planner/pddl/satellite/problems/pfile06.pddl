@@ -25,7 +25,7 @@
 	Star9 - direction
 	Star10 - direction
 )
-(:init ( and
+(:init 
 	(supports instrument0 infrared1)
 	(supports instrument0 spectrograph0)
 	(calibration_target instrument0 Star1)
@@ -51,7 +51,7 @@
 	(calibration_target instrument4 Star0)
 	(on_board instrument4 satellite2)
 	(power_avail satellite2)
-	(pointing satellite2 Star6) )
+	(pointing satellite2 Star6) 
 )
 (:goal (and
 	(have_image Planet4 thermograph2)

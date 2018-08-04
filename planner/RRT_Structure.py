@@ -3,10 +3,14 @@ class RandomTree(object):
     def __init__(self, node, parent_node=None, cost=None, edge=[]):
         if parent_node is not None:
             assert isinstance(parent_node, RandomTree)
-        self.node = node
+        self._node = node
         self.parent_node = parent_node
         self._cost = cost
         self.edge = edge
+
+    @property
+    def node(self):
+        return set(self._node)
 
     @property
     def cost(self):

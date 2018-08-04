@@ -28,10 +28,9 @@ def h_naive(state, planning):
 def h_ff(state, planning, goal):
     graphplan = dict() #graphplan relaxed
     actions = planning.actions
-    #goal = planning._problem.goal
     X = state
     isGoal = False
-    if X.intersect(goal) == goal: #ja estamos na meta entao o compimento (a quantidade) de acoes necessaria eh zero
+    if X.intersect(goal) == goal: #ja estamos na meta entao o comprimento (a quantidade) de acoes necessaria eh zero
         return 0
     level = 0
     graphplan[(level,'state')] = X

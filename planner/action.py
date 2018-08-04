@@ -94,3 +94,6 @@ class Action(object):
 
     def __repr__(self):
         return '{0}({1})'.format(self._name, ', '.join(self._args))
+
+    def validator_format(self):
+        return '({0} {1})'.format(self._name, ' '.join(self._args))
