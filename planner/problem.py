@@ -54,8 +54,8 @@ class Problem(object):
                 for pre in operator.precond:
                     if pre.is_negative():
                         predicate = pre.predicate
-                        if (predicate.name != '='): # tive que colocar isso para rodar coisas de outro domínio...posso tirar
-                            continue
+                        # if (predicate.name != '='): # tive que colocar isso para rodar coisas de outro domínio...posso tirar
+                        #     continue
                         assert(predicate.name == '=')
                         lhs = subst[predicate.args[0]]
                         rhs = subst[predicate.args[1]]

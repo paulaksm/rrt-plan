@@ -3,13 +3,10 @@ import random
 from state import State
 from node  import Node
 import heuristics
-import numpy as np
+#import numpy as np
 from RRT_Structure import RandomTree
 from ProgressionPlanning import ProgressionPlanning
 from subplanner import AStar, WAStar, EHC
-
-import matplotlib.pyplot as plt
-import networkx as nx
 
 class RRTPlan(ProgressionPlanning):
     '''
@@ -27,7 +24,7 @@ class RRTPlan(ProgressionPlanning):
 
     def nearest_neighbor(self, state, tree_set):
         near = None
-        closer = np.inf
+        closer = float("inf")
         for node in tree_set:
             distance = sum(node.cost[p] for p in state)
             if distance < closer:
@@ -49,7 +46,7 @@ class RRTPlan(ProgressionPlanning):
             q_rand = self.sample_random()
             qrand_list.append(q_rand)
             q_near = self.nearest_neighbor(q_rand, node_tree)
-            q_new, path, reached = planner.solve(q_near, q_rand, max_step=10)       
+            q_new, path, reached = planner.solve(q_near, q_rand, max_step=50)       
             if not reached:
                 continue           
             qnew_cost = heuristics.h_add(self, q_new) # q_new is a set of atoms (state)
@@ -94,8 +91,8 @@ class RRTPlan(ProgressionPlanning):
             log_info = '>>> ITERATION N. {} <<<\n'.format(iteration)
             qrand_list.append(q_rand)
             q_near = self.nearest_neighbor(q_rand, node_tree)
-            q_new, path, reached = planner.solve(q_near, q_rand, max_step=10)       
-            log_info += '[{}] SAMPLE --- max_steps: {}\n'.format(reached, 10)
+            q_new, path, reached = planner.solve(q_near, q_rand, max_step=30)       
+            log_info += '[{}] SAMPLE --- max_steps: {}\n'.format(reached, 30)
             log_info += '\nSAMPLED ATOMS -> {}\n'.format(set(q_rand))
             log_info += '\nSUB-PATH -> {}\n'.format(path)
             log_info += '\nNEAR ABSTRACT STATE -> {}\n'.format(set(q_near.node))
@@ -134,6 +131,8 @@ class RRTPlan(ProgressionPlanning):
         return path, qrand_list
 
     def solve_graph_plot(self):
+        import matplotlib.pyplot as plt
+        import networkx as nx
         # Initializing tree and set of nodes  
         node_tree = set()
         init_state = self.problem.init
@@ -228,6 +227,8 @@ class RRTPlan(ProgressionPlanning):
 
     def solve_log_plot(self):
         # Initializing tree and set of nodes
+        import matplotlib.pyplot as plt
+        import networkx as nx
         node_tree = set()
         init_state = self.problem.init
         root_node = RandomTree(init_state)

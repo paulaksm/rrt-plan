@@ -1,10 +1,9 @@
-import argparse
 import time
+import argparse
 import signal
-
-from parser     import Parser
-from planner    import RRTPlan
-from heuristics import h_naive, h_add
+from parser_pddl import Parser
+from planner     import RRTPlan
+from heuristics  import h_naive, h_add
 
 def parse():
     usage = 'python3 pystrips.py {show, ground, solve} <DOMAIN> <INSTANCE> [OPTIONS]'
