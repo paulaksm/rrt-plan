@@ -1,0 +1,16 @@
+LOG FILE -- RRT-Plan
+
+Goal Atoms -> {'on(b, a)', 'on(c, b)', 'on(d, c)'}
+
+>>> ITERATION N. 1 <<<
+[True] SAMPLE --- max_steps: 10
+
+SAMPLED ATOMS -> {'on(c, b)', 'on(b, a)'}
+
+SUB-PATH -> [pick-up(b), stack(b, a), pick-up(c), stack(c, b)]
+
+NEAR ABSTRACT STATE -> {'ontable(a)', 'clear(d)', 'clear(a)', 'clear(b)', 'handempty', 'ontable(d)', 'ontable(b)', 'ontable(c)', 'clear(c)'}
+
+CONNECT TO GOAL --- max_steps: 10
+ -> {'ontable(a)', 'clear(d)', 'handempty', 'on(c, b)', 'on(b, a)', 'on(d, c)'}
+

@@ -1,0 +1,29 @@
+LOG FILE -- RRT-Plan
+
+Goal Atoms -> {'box-at(box2, room2)', 'box-at(box5, room5)', 'box-at(box3, room3)', 'box-at(box8, room8)', 'box-at(box9, room9)', 'box-at(box1, room1)', 'box-at(box7, room7)', 'box-at(box6, room6)', 'box-at(box4, room4)'}
+
+>>> ITERATION N. 1 <<<
+[True] SAMPLE --- max_steps: 10
+
+SAMPLED ATOMS -> {'box-at(box5, room5)'}
+
+SUB-PATH -> [pickup(box5, left, room1), move(room1, room5), putdown(box5, left, room5)]
+
+NEAR ABSTRACT STATE -> {'box-at(box5, room1)', 'free(right)', 'free(left)', 'box-at(box7, room1)', 'box-at(box4, room1)', 'box-at(box6, room1)', 'box-at(box9, room1)', 'box-at(box1, room1)', 'box-at(box8, room1)', 'box-at(box2, room1)', 'box-at(box3, room1)', 'robot-at(room1)'}
+
+CONNECT TO GOAL --- max_steps: 10
+ -> {'box-at(box2, room2)', 'free(right)', 'free(left)', 'box-at(box5, room5)', 'box-at(box3, room3)', 'box-at(box7, room1)', 'box-at(box6, room1)', 'box-at(box9, room1)', 'box-at(box1, room1)', 'box-at(box8, room1)', 'robot-at(room1)', 'box-at(box4, room4)'}
+
+
+>>> ITERATION N. 2 <<<
+[True] SAMPLE --- max_steps: 10
+
+SAMPLED ATOMS -> {'box-at(box2, room2)', 'box-at(box1, room1)', 'box-at(box7, room7)', 'box-at(box3, room3)', 'box-at(box9, room9)', 'box-at(box6, room6)', 'box-at(box4, room4)'}
+
+SUB-PATH -> [pickup(box6, left, room1), move(room1, room6), putdown(box6, left, room6), move(room6, room1), pickup(box7, left, room1), pickup(box9, right, room1), move(room1, room7), putdown(box7, left, room7), move(room7, room9), putdown(box9, right, room9)]
+
+NEAR ABSTRACT STATE -> {'box-at(box2, room2)', 'free(right)', 'free(left)', 'box-at(box5, room5)', 'box-at(box3, room3)', 'box-at(box7, room1)', 'box-at(box6, room1)', 'box-at(box9, room1)', 'box-at(box1, room1)', 'box-at(box8, room1)', 'robot-at(room1)', 'box-at(box4, room4)'}
+
+CONNECT TO GOAL --- max_steps: 10
+ -> {'free(right)', 'box-at(box2, room2)', 'free(left)', 'box-at(box5, room5)', 'box-at(box3, room3)', 'box-at(box8, room8)', 'box-at(box9, room9)', 'box-at(box1, room1)', 'robot-at(room8)', 'box-at(box7, room7)', 'box-at(box6, room6)', 'box-at(box4, room4)'}
+

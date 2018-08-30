@@ -1,0 +1,29 @@
+LOG FILE -- RRT-Plan
+
+Goal Atoms -> {'box-at(box10, room2)', 'box-at(box3, room2)', 'box-at(box4, room2)', 'box-at(box7, room2)', 'box-at(box6, room2)', 'box-at(box8, room2)', 'box-at(box2, room2)', 'box-at(box1, room2)', 'box-at(box9, room2)', 'box-at(box5, room2)'}
+
+>>> ITERATION N. 1 <<<
+[True] SAMPLE --- max_steps: 10
+
+SAMPLED ATOMS -> {'box-at(box4, room2)', 'box-at(box10, room2)', 'box-at(box6, room2)'}
+
+SUB-PATH -> [pickup(box4, left, room1), move(room1, room2), putdown(box4, left, room2), move(room2, room1), pickup(box6, left, room1), pickup(box10, right, room1), move(room1, room2), putdown(box6, left, room2), putdown(box10, right, room2)]
+
+NEAR ABSTRACT STATE -> {'box-at(box5, room1)', 'robot-at(room1)', 'box-at(box4, room1)', 'box-at(box9, room1)', 'free(right)', 'box-at(box3, room1)', 'box-at(box6, room1)', 'box-at(box8, room1)', 'box-at(box1, room1)', 'box-at(box10, room1)', 'box-at(box2, room1)', 'free(left)', 'box-at(box7, room1)'}
+
+CONNECT TO GOAL --- max_steps: 10
+ -> {'box-at(box10, room2)', 'box-at(box3, room2)', 'box-at(box4, room2)', 'box-at(box7, room2)', 'box-at(box8, room1)', 'box-at(box6, room2)', 'box-at(box9, room1)', 'box-at(box1, room2)', 'box-at(box2, room2)', 'free(left)', 'robot-at(room2)', 'free(right)', 'box-at(box5, room2)'}
+
+
+>>> ITERATION N. 2 <<<
+[True] SAMPLE --- max_steps: 10
+
+SAMPLED ATOMS -> {'box-at(box2, room2)'}
+
+SUB-PATH -> []
+
+NEAR ABSTRACT STATE -> {'box-at(box10, room2)', 'box-at(box3, room2)', 'box-at(box4, room2)', 'box-at(box7, room2)', 'box-at(box8, room1)', 'box-at(box6, room2)', 'box-at(box9, room1)', 'box-at(box1, room2)', 'box-at(box2, room2)', 'free(left)', 'robot-at(room2)', 'free(right)', 'box-at(box5, room2)'}
+
+CONNECT TO GOAL --- max_steps: 10
+ -> {'box-at(box10, room2)', 'box-at(box3, room2)', 'box-at(box4, room2)', 'box-at(box7, room2)', 'box-at(box6, room2)', 'box-at(box8, room2)', 'box-at(box1, room2)', 'box-at(box2, room2)', 'box-at(box9, room2)', 'free(left)', 'robot-at(room2)', 'free(right)', 'box-at(box5, room2)'}
+

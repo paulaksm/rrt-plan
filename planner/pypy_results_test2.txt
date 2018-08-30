@@ -1,0 +1,71 @@
+
+>> Solving pddl/satellite/problems/pfile01.pddl ...
+Goal found
+>> solution length = 9
+>> time: parsing = 0.0087, grounding = 0.0104, planning = 0.0962
+
+[switch_on(instrument0, satellite0), turn_to(satellite0, groundstation2, phenomenon6), calibrate(satellite0, instrument0, groundstation2), turn_to(satellite0, phenomenon4, groundstation2), take_image(satellite0, phenomenon4, instrument0, thermograph0), turn_to(satellite0, star5, phenomenon4), take_image(satellite0, star5, instrument0, thermograph0), turn_to(satellite0, phenomenon6, star5), take_image(satellite0, phenomenon6, instrument0, thermograph0)]
+
+>> Solving pddl/satellite/problems/pfile02.pddl ...
+Goal found
+>> solution length = 19
+>> time: parsing = 0.0095, grounding = 0.0161, planning = 0.2089
+
+[switch_on(instrument0, satellite0), turn_to(satellite0, star0, planet4), calibrate(satellite0, instrument0, star0), turn_to(satellite0, planet3, star0), take_image(satellite0, planet3, instrument0, infrared0), turn_to(satellite0, planet4, planet3), take_image(satellite0, planet4, instrument0, infrared0), turn_to(satellite0, groundstation2, planet4), turn_to(satellite0, phenomenon6, groundstation2), take_image(satellite0, phenomenon6, instrument0, infrared0), turn_to(satellite0, groundstation2, phenomenon6), turn_to(satellite0, star7, groundstation2), take_image(satellite0, star7, instrument0, infrared0), turn_to(satellite0, groundstation2, star7), switch_off(instrument0, satellite0), switch_on(instrument1, satellite0), calibrate(satellite0, instrument1, groundstation2), turn_to(satellite0, phenomenon5, groundstation2), take_image(satellite0, phenomenon5, instrument1, image2)]
+
+>> Solving pddl/satellite/problems/pfile03.pddl ...
+Goal found
+>> solution length = 13
+>> time: parsing = 0.0106, grounding = 0.0618, planning = 0.4693
+
+[turn_to(satellite0, star1, star4), switch_on(instrument0, satellite0), calibrate(satellite0, instrument0, star1), turn_to(satellite0, star3, star1), take_image(satellite0, star3, instrument0, infrared0), turn_to(satellite0, phenomenon5, star3), take_image(satellite0, phenomenon5, instrument0, spectrograph2), turn_to(satellite0, star4, phenomenon5), take_image(satellite0, star4, instrument0, spectrograph2), turn_to(satellite0, phenomenon5, star4), turn_to(satellite0, phenomenon7, phenomenon5), take_image(satellite0, phenomenon7, instrument0, spectrograph2), turn_to(satellite0, phenomenon5, phenomenon7)]
+
+>> Solving pddl/satellite/problems/pfile04.pddl ...
+Goal found
+>> solution length = 24
+>> time: parsing = 0.0121, grounding = 0.0625, planning = 3.2583
+
+[turn_to(satellite0, star0, star6), turn_to(satellite1, star2, star0), switch_on(instrument0, satellite0), switch_on(instrument1, satellite1), turn_to(satellite0, groundstation1, star0), calibrate(satellite1, instrument1, star2), turn_to(satellite1, planet3, star2), take_image(satellite1, planet3, instrument1, infrared1), turn_to(satellite1, star4, planet3), take_image(satellite1, star4, instrument1, infrared1), turn_to(satellite1, planet5, star4), turn_to(satellite1, star6, planet5), take_image(satellite1, star6, instrument1, infrared1), turn_to(satellite1, planet5, star6), turn_to(satellite1, star7, planet5), take_image(satellite1, star7, instrument1, infrared0), turn_to(satellite1, planet5, star7), turn_to(satellite1, phenomenon8, planet5), take_image(satellite1, phenomenon8, instrument1, thermograph2), turn_to(satellite1, planet5, phenomenon8), turn_to(satellite1, phenomenon9, planet5), take_image(satellite1, phenomenon9, instrument1, infrared0), turn_to(satellite1, planet5, phenomenon9), take_image(satellite1, planet5, instrument1, thermograph2)]
+
+>> Solving pddl/satellite/problems/pfile05.pddl ...
+Goal found
+>> solution length = 19
+>> time: parsing = 0.0331, grounding = 0.1090, planning = 21.5706
+
+[switch_on(instrument0, satellite0), turn_to(satellite0, groundstation2, phenomenon8), calibrate(satellite0, instrument0, groundstation2), turn_to(satellite0, star3, groundstation2), take_image(satellite0, star3, instrument0, thermograph0), turn_to(satellite0, phenomenon5, star3), take_image(satellite0, phenomenon5, instrument0, image2), turn_to(satellite0, phenomenon6, phenomenon5), take_image(satellite0, phenomenon6, instrument0, image2), turn_to(satellite0, phenomenon5, phenomenon6), turn_to(satellite0, phenomenon8, phenomenon5), take_image(satellite0, phenomenon8, instrument0, image2), turn_to(satellite0, phenomenon5, phenomenon8), turn_to(satellite0, planet9, phenomenon5), take_image(satellite0, planet9, instrument0, spectrograph1), turn_to(satellite0, phenomenon5, planet9), turn_to(satellite0, star7, phenomenon5), take_image(satellite0, star7, instrument0, thermograph0), turn_to(satellite0, phenomenon5, star7)]
+
+>> Solving pddl/satellite/problems/pfile06.pddl ...
+Goal found
+>> solution length = 25
+>> time: parsing = 0.0133, grounding = 0.1168, planning = 18.8977
+
+[turn_to(satellite1, star2, star6), switch_on(instrument0, satellite0), switch_on(instrument1, satellite1), calibrate(satellite1, instrument1, star2), turn_to(satellite1, star10, star2), take_image(satellite1, star10, instrument1, infrared3), turn_to(satellite0, star1, phenomenon8), calibrate(satellite0, instrument0, star1), turn_to(satellite0, phenomenon8, star1), take_image(satellite0, phenomenon8, instrument0, spectrograph0), turn_to(satellite0, planet5, phenomenon8), turn_to(satellite1, star2, star10), take_image(satellite0, planet5, instrument0, spectrograph0), turn_to(satellite0, star9, planet5), take_image(satellite0, star9, instrument0, infrared1), turn_to(satellite1, star7, star2), take_image(satellite1, star7, instrument1, infrared3), turn_to(satellite1, star2, star7), switch_off(instrument1, satellite1), switch_on(instrument2, satellite1), calibrate(satellite1, instrument2, star2), turn_to(satellite1, planet4, star2), take_image(satellite1, planet4, instrument2, thermograph2), turn_to(satellite1, star6, planet4), take_image(satellite1, star6, instrument2, thermograph2)]
+
+>> Solving pddl/satellite/problems/pfile07.pddl ...
+Goal found
+>> solution length = 24
+>> time: parsing = 0.0311, grounding = 0.1730, planning = 100.1053
+
+[turn_to(satellite0, groundstation2, star6), turn_to(satellite1, groundstation4, groundstation0), turn_to(satellite2, phenomenon5, star6), switch_on(instrument0, satellite0), switch_on(instrument3, satellite1), calibrate(satellite1, instrument3, groundstation4), turn_to(satellite1, phenomenon5, groundstation4), take_image(satellite1, phenomenon5, instrument3, image0), turn_to(satellite1, star7, phenomenon5), take_image(satellite1, star7, instrument3, image0), turn_to(satellite1, planet10, star7), take_image(satellite1, planet10, instrument3, image0), turn_to(satellite1, planet11, planet10), take_image(satellite1, planet11, instrument3, image2), turn_to(satellite0, star1, groundstation2), turn_to(satellite1, star1, planet11), calibrate(satellite0, instrument0, star1), turn_to(satellite0, star6, star1), take_image(satellite0, star6, instrument0, image1), turn_to(satellite0, planet9, star6), take_image(satellite0, planet9, instrument0, image3), turn_to(satellite1, planet8, star1), take_image(satellite1, planet8, instrument3, image0), turn_to(satellite1, star1, planet8)]
+
+>> Solving pddl/satellite/problems/pfile08.pddl ...
+Goal found
+>> solution length = 26
+>> time: parsing = 0.0271, grounding = 0.1776, planning = 25.9012
+
+[turn_to(satellite0, star2, phenomenon14), switch_on(instrument1, satellite0), turn_to(satellite1, groundstation1, star4), switch_on(instrument3, satellite1), calibrate(satellite0, instrument1, star2), turn_to(satellite0, phenomenon5, star2), calibrate(satellite1, instrument3, groundstation1), turn_to(satellite1, phenomenon9, groundstation1), take_image(satellite0, phenomenon5, instrument1, thermograph1), turn_to(satellite0, star6, phenomenon5), take_image(satellite0, star6, instrument1, thermograph1), turn_to(satellite0, planet11, star6), take_image(satellite0, planet11, instrument1, thermograph2), turn_to(satellite0, phenomenon13, planet11), take_image(satellite0, phenomenon13, instrument1, thermograph1), take_image(satellite1, phenomenon9, instrument3, image0), turn_to(satellite0, star7, phenomenon13), turn_to(satellite1, phenomenon8, phenomenon9), take_image(satellite0, star7, instrument1, spectrograph3), turn_to(satellite0, star10, star7), take_image(satellite0, star10, instrument1, spectrograph3), turn_to(satellite0, phenomenon14, star10), take_image(satellite0, phenomenon14, instrument1, thermograph2), take_image(satellite1, phenomenon8, instrument3, image0), turn_to(satellite1, phenomenon12, phenomenon8), take_image(satellite1, phenomenon12, instrument3, image0)]
+
+>> Solving pddl/satellite/problems/pfile09.pddl ...
+Goal found
+>> solution length = 32
+>> time: parsing = 0.0286, grounding = 0.1974, planning = 99.5834
+
+[turn_to(satellite0, star4, star0), turn_to(satellite1, star2, planet11), turn_to(satellite3, star9, planet10), switch_on(instrument3, satellite1), calibrate(satellite1, instrument3, star2), turn_to(satellite1, planet5, star2), take_image(satellite1, planet5, instrument3, image2), turn_to(satellite1, phenomenon6, planet5), take_image(satellite1, phenomenon6, instrument3, image3), turn_to(satellite1, phenomenon8, phenomenon6), take_image(satellite1, phenomenon8, instrument3, image2), turn_to(satellite1, star9, phenomenon8), take_image(satellite1, star9, instrument3, image3), turn_to(satellite1, planet10, star9), take_image(satellite1, planet10, instrument3, image4), turn_to(satellite1, phenomenon12, planet10), take_image(satellite1, phenomenon12, instrument3, image3), turn_to(satellite1, star14, phenomenon12), take_image(satellite1, star14, instrument3, image4), turn_to(satellite0, star3, star4), switch_on(instrument0, satellite0), turn_to(satellite2, star2, phenomenon6), switch_on(instrument6, satellite2), calibrate(satellite0, instrument0, star3), turn_to(satellite0, phenomenon7, star3), calibrate(satellite2, instrument6, star2), turn_to(satellite2, planet11, star2), take_image(satellite0, phenomenon7, instrument0, infrared1), take_image(satellite2, planet11, instrument6, spectrograph0), turn_to(satellite2, phenomenon13, planet11), take_image(satellite2, phenomenon13, instrument6, spectrograph0), turn_to(satellite4, planet5, star9)]
+
+>> Solving pddl/satellite/problems/pfile10.pddl ...
+Goal found
+>> solution length = 35
+>> time: parsing = 0.0390, grounding = 0.2074, planning = 173.8659
+
+[turn_to(satellite0, star1, star0), switch_on(instrument0, satellite0), calibrate(satellite0, instrument0, star1), turn_to(satellite0, star7, star1), take_image(satellite0, star7, instrument0, image4), turn_to(satellite0, planet5, star7), turn_to(satellite2, star2, star1), turn_to(satellite4, planet9, planet10), switch_on(instrument3, satellite1), switch_on(instrument4, satellite2), switch_on(instrument10, satellite4), calibrate(satellite1, instrument3, star4), turn_to(satellite1, star6, star4), calibrate(satellite2, instrument4, star2), turn_to(satellite2, phenomenon8, star2), turn_to(satellite4, star0, planet9), calibrate(satellite4, instrument10, star0), turn_to(satellite4, star16, star0), take_image(satellite0, planet5, instrument0, image4), take_image(satellite2, phenomenon8, instrument4, image4), turn_to(satellite2, phenomenon14, phenomenon8), take_image(satellite2, phenomenon14, instrument4, spectrograph1), turn_to(satellite2, star15, phenomenon14), take_image(satellite2, star15, instrument4, spectrograph1), take_image(satellite4, star16, instrument10, image2), turn_to(satellite0, star12, planet5), turn_to(satellite2, planet9, star15), turn_to(satellite4, planet9, star16), take_image(satellite0, star12, instrument0, image4), turn_to(satellite0, phenomenon13, star12), take_image(satellite0, phenomenon13, instrument0, image4), take_image(satellite1, star6, instrument3, infrared3), turn_to(satellite1, planet10, star6), take_image(satellite1, planet10, instrument3, infrared3), take_image(satellite2, planet9, instrument4, infrared0)]
+

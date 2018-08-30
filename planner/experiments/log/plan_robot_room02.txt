@@ -1,0 +1,1 @@
+(pickup box2 left room1)(move room1 room2)(putdown box2 left room2)

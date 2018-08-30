@@ -1,0 +1,59 @@
+\begin{frame}{Algoritmo - AD*}
+\begin{algorithm}[H]
+\caption{key(s)}
+\begin{algorithmic}[1]
+\If {$g(s) > rhs(s)$}
+\State \textbf{return} [$rhs(s) + \epsilon \cdot h(s_{start}, s); rhs(s)$];
+\Else
+\State \textbf{return} [$g(s) + h(s_{start}, s); g(s)$];
+\EndIf
+\end{algorithmic}
+\end{algorithm}
+\begin{algorithm}[H]
+\caption{UpdateState(s)}
+\begin{algorithmic}[1]
+\setalglineno{5}
+\If {$s$ was not visited before}
+    \State $g(s) = \infty$;
+\EndIf
+\If {($s \neq s_{goal}$)} $rhs(s)=min_{s' \in Succ(s)}(c(s,s') + g(s'));$
+\EndIf
+\If {($s \in OPEN$)} remove $s$ from OPEN;
+\EndIf
+\If {($g(s) \neq rhs(s)$)} 
+  \If {$s \notin CLOSED$}
+    \State insert $s$ into OPEN with $key(s)$;
+    \Else
+    \State insert $s$ into INCONS;
+    \EndIf
+\EndIf
+\end{algorithmic}
+\end{algorithm}
+\end{frame}
+
+\begin{frame}{Algoritmo - AD* função ComputeOrImprovePath}
+\begin{algorithm}[H]
+\caption{ComputeOrImprovePath()}
+\begin{algorithmic}[1]
+\setalglineno{5}
+\While {($min_{s \in OPEN}(key(s)) < key(s_{start}) \:\Or\: rhs(s_{start}) \neq  g(s_{start}) $)}
+\State remove state $s$ with the minimum key from OPEN;
+\If {($g(s) > rhs(s)$)}
+\State $g(s) = rhs(s)$;
+\State CLOSED = CLOSED $\cup \{s\}$;
+\For {\textbf{all} $s' \in Pred(s)$} $UpdateState(s')$;
+\EndFor
+\Else 
+\State $g(s) = \infty$;
+\For {\textbf{all} $s' \in Pred(s) \cup \{s\}$} $UpdateState(s')$;
+\EndFor
+\EndIf
+\EndWhile
+\end{algorithmic}
+\end{algorithm}
+\end{frame}
+
+\section{Resultados}
+\begin{frame}{A*}
+\input{tikzfiles/astar}
+\end{frame}

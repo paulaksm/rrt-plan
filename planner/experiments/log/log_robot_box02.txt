@@ -1,0 +1,16 @@
+LOG FILE -- RRT-Plan
+
+Goal Atoms -> {'box-at(box2, room2)', 'box-at(box1, room2)'}
+
+>>> ITERATION N. 1 <<<
+[True] SAMPLE --- max_steps: 10
+
+SAMPLED ATOMS -> {'box-at(box2, room2)'}
+
+SUB-PATH -> [pickup(box2, left, room1), move(room1, room2), putdown(box2, left, room2)]
+
+NEAR ABSTRACT STATE -> {'box-at(box2, room1)', 'free(left)', 'box-at(box1, room1)', 'robot-at(room1)', 'free(right)'}
+
+CONNECT TO GOAL --- max_steps: 10
+ -> {'robot-at(room2)', 'free(left)', 'box-at(box2, room2)', 'box-at(box1, room2)', 'free(right)'}
+

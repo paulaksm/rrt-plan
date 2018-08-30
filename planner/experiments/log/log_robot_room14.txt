@@ -1,0 +1,75 @@
+LOG FILE -- RRT-Plan
+
+Goal Atoms -> {'box-at(box13, room13)', 'box-at(box4, room4)', 'box-at(box8, room8)', 'box-at(box1, room1)', 'box-at(box2, room2)', 'box-at(box3, room3)', 'box-at(box14, room14)', 'box-at(box10, room10)', 'box-at(box12, room12)', 'box-at(box5, room5)', 'box-at(box11, room11)', 'box-at(box6, room6)', 'box-at(box9, room9)', 'box-at(box7, room7)'}
+
+>>> ITERATION N. 1 <<<
+[False] SAMPLE --- max_steps: 10
+
+SAMPLED ATOMS -> {'box-at(box13, room13)', 'box-at(box8, room8)', 'box-at(box1, room1)', 'box-at(box2, room2)', 'box-at(box14, room14)', 'box-at(box12, room12)', 'box-at(box5, room5)', 'box-at(box11, room11)', 'box-at(box6, room6)', 'box-at(box9, room9)', 'box-at(box7, room7)'}
+
+SUB-PATH -> [pickup(box2, left, room1), move(room1, room2), putdown(box2, left, room2), move(room2, room1), pickup(box5, left, room1), move(room1, room5), putdown(box5, left, room5), move(room5, room1), pickup(box6, left, room1), move(room1, room6), putdown(box6, left, room6), move(room6, room1), pickup(box7, left, room1)]
+
+NEAR ABSTRACT STATE -> {'box-at(box12, room1)', 'robot-at(room1)', 'box-at(box9, room1)', 'box-at(box7, room1)', 'box-at(box5, room1)', 'box-at(box11, room1)', 'free(right)', 'box-at(box4, room1)', 'box-at(box8, room1)', 'box-at(box6, room1)', 'box-at(box1, room1)', 'box-at(box14, room1)', 'free(left)', 'box-at(box10, room1)', 'box-at(box13, room1)', 'box-at(box3, room1)', 'box-at(box2, room1)'}
+
+
+>>> ITERATION N. 2 <<<
+[True] SAMPLE --- max_steps: 10
+
+SAMPLED ATOMS -> {'box-at(box10, room10)', 'box-at(box9, room9)'}
+
+SUB-PATH -> [pickup(box9, left, room1), pickup(box10, right, room1), move(room1, room9), putdown(box9, left, room9), move(room9, room10), putdown(box10, right, room10)]
+
+NEAR ABSTRACT STATE -> {'box-at(box12, room1)', 'robot-at(room1)', 'box-at(box9, room1)', 'box-at(box7, room1)', 'box-at(box5, room1)', 'box-at(box11, room1)', 'free(right)', 'box-at(box4, room1)', 'box-at(box8, room1)', 'box-at(box6, room1)', 'box-at(box1, room1)', 'box-at(box14, room1)', 'free(left)', 'box-at(box10, room1)', 'box-at(box13, room1)', 'box-at(box3, room1)', 'box-at(box2, room1)'}
+
+CONNECT TO GOAL --- max_steps: 10
+ -> {'box-at(box12, room1)', 'box-at(box2, room2)', 'robot-at(room1)', 'box-at(box3, room3)', 'box-at(box7, room1)', 'box-at(box5, room1)', 'box-at(box11, room1)', 'free(right)', 'box-at(box8, room1)', 'box-at(box4, room4)', 'box-at(box6, room1)', 'box-at(box1, room1)', 'box-at(box14, room1)', 'free(left)', 'box-at(box10, room10)', 'box-at(box13, room1)', 'box-at(box9, room9)'}
+
+
+>>> ITERATION N. 3 <<<
+[True] SAMPLE --- max_steps: 10
+
+SAMPLED ATOMS -> {'box-at(box14, room14)', 'box-at(box1, room1)'}
+
+SUB-PATH -> [pickup(box14, left, room1), move(room1, room14), putdown(box14, left, room14)]
+
+NEAR ABSTRACT STATE -> {'box-at(box12, room1)', 'robot-at(room1)', 'box-at(box9, room1)', 'box-at(box7, room1)', 'box-at(box5, room1)', 'box-at(box11, room1)', 'free(right)', 'box-at(box4, room1)', 'box-at(box8, room1)', 'box-at(box6, room1)', 'box-at(box1, room1)', 'box-at(box14, room1)', 'free(left)', 'box-at(box10, room1)', 'box-at(box13, room1)', 'box-at(box3, room1)', 'box-at(box2, room1)'}
+
+CONNECT TO GOAL --- max_steps: 10
+ -> {'box-at(box12, room1)', 'box-at(box2, room2)', 'robot-at(room1)', 'box-at(box3, room3)', 'box-at(box14, room14)', 'box-at(box9, room1)', 'box-at(box7, room1)', 'box-at(box5, room1)', 'box-at(box11, room1)', 'free(right)', 'box-at(box8, room1)', 'box-at(box4, room4)', 'box-at(box6, room1)', 'box-at(box1, room1)', 'free(left)', 'box-at(box10, room1)', 'box-at(box13, room1)'}
+
+
+>>> ITERATION N. 4 <<<
+[False] SAMPLE --- max_steps: 10
+
+SAMPLED ATOMS -> {'box-at(box13, room13)', 'box-at(box12, room12)', 'box-at(box4, room4)', 'box-at(box5, room5)', 'box-at(box2, room2)', 'box-at(box3, room3)', 'box-at(box7, room7)'}
+
+SUB-PATH -> [pickup(box5, left, room1), move(room1, room5), putdown(box5, left, room5), move(room5, room1), pickup(box7, left, room1), move(room1, room7), putdown(box7, left, room7), move(room7, room1), pickup(box12, left, room1), pickup(box13, right, room1), move(room1, room12), putdown(box12, left, room12)]
+
+NEAR ABSTRACT STATE -> {'box-at(box12, room1)', 'box-at(box2, room2)', 'robot-at(room1)', 'box-at(box3, room3)', 'box-at(box7, room1)', 'box-at(box5, room1)', 'box-at(box11, room1)', 'free(right)', 'box-at(box8, room1)', 'box-at(box4, room4)', 'box-at(box6, room1)', 'box-at(box1, room1)', 'box-at(box14, room1)', 'free(left)', 'box-at(box10, room10)', 'box-at(box13, room1)', 'box-at(box9, room9)'}
+
+
+>>> ITERATION N. 5 <<<
+[True] SAMPLE --- max_steps: 10
+
+SAMPLED ATOMS -> {'box-at(box10, room10)', 'box-at(box13, room13)', 'box-at(box4, room4)', 'box-at(box2, room2)', 'box-at(box6, room6)', 'box-at(box3, room3)', 'box-at(box7, room7)'}
+
+SUB-PATH -> [pickup(box6, left, room1), move(room1, room6), putdown(box6, left, room6), move(room6, room1), pickup(box7, left, room1), pickup(box13, right, room1), move(room1, room7), putdown(box7, left, room7), move(room7, room13), putdown(box13, right, room13)]
+
+NEAR ABSTRACT STATE -> {'box-at(box12, room1)', 'box-at(box2, room2)', 'robot-at(room1)', 'box-at(box3, room3)', 'box-at(box7, room1)', 'box-at(box5, room1)', 'box-at(box11, room1)', 'free(right)', 'box-at(box8, room1)', 'box-at(box4, room4)', 'box-at(box6, room1)', 'box-at(box1, room1)', 'box-at(box14, room1)', 'free(left)', 'box-at(box10, room10)', 'box-at(box13, room1)', 'box-at(box9, room9)'}
+
+CONNECT TO GOAL --- max_steps: 10
+ -> {'box-at(box12, room1)', 'box-at(box8, room8)', 'box-at(box2, room2)', 'robot-at(room1)', 'box-at(box3, room3)', 'box-at(box11, room11)', 'free(right)', 'box-at(box6, room6)', 'box-at(box13, room13)', 'box-at(box4, room4)', 'box-at(box1, room1)', 'box-at(box14, room1)', 'free(left)', 'box-at(box10, room10)', 'box-at(box5, room5)', 'box-at(box9, room9)', 'box-at(box7, room7)'}
+
+
+>>> ITERATION N. 6 <<<
+[True] SAMPLE --- max_steps: 10
+
+SAMPLED ATOMS -> {'box-at(box9, room9)', 'box-at(box4, room4)', 'box-at(box8, room8)', 'box-at(box1, room1)', 'box-at(box2, room2)', 'box-at(box3, room3)', 'box-at(box10, room10)', 'box-at(box11, room11)', 'box-at(box13, room13)', 'box-at(box7, room7)'}
+
+SUB-PATH -> []
+
+NEAR ABSTRACT STATE -> {'box-at(box12, room1)', 'box-at(box8, room8)', 'box-at(box2, room2)', 'robot-at(room1)', 'box-at(box3, room3)', 'box-at(box11, room11)', 'free(right)', 'box-at(box6, room6)', 'box-at(box13, room13)', 'box-at(box4, room4)', 'box-at(box1, room1)', 'box-at(box14, room1)', 'free(left)', 'box-at(box10, room10)', 'box-at(box5, room5)', 'box-at(box9, room9)', 'box-at(box7, room7)'}
+
+CONNECT TO GOAL --- max_steps: 10
+ -> {'box-at(box8, room8)', 'box-at(box2, room2)', 'box-at(box3, room3)', 'robot-at(room14)', 'box-at(box14, room14)', 'box-at(box11, room11)', 'free(right)', 'box-at(box6, room6)', 'box-at(box13, room13)', 'box-at(box4, room4)', 'box-at(box1, room1)', 'free(left)', 'box-at(box10, room10)', 'box-at(box12, room12)', 'box-at(box5, room5)', 'box-at(box9, room9)', 'box-at(box7, room7)'}
+
